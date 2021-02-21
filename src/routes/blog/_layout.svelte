@@ -30,7 +30,7 @@
     }
 </style>
 
-<div in:fadeIn out:fadeOut class="two-col">
+<div class="two-col">
     <slot />
     {#if segment}
     <aside transition:fly="{{ x: 100 }}">
