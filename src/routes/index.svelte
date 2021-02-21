@@ -1,7 +1,7 @@
 <script>
+	import successkid from 'images/successkid.jpg';
 	import { goto } from '@sapper/app'
 	import { fadeIn, fadeOut } from "../animate"
-	import Image from 'svelte-image'; 
 
 	function doThing() {
 		console.log('doing the thing')
@@ -23,6 +23,12 @@
 	}
 
 	figure {
+		margin: 0 0 1em 0;
+	}
+
+	img {
+		width: 100%;
+		max-width: 400px;
 		margin: 0 0 1em 0;
 	}
 
@@ -48,7 +54,7 @@
 <button on:click={doThing}>Send Me Elsewhere</button>
 
 <figure>
-	<Image alt="Success Kid" src="../static/images/successkid.jpg" />
+	<img alt="Success Kid" src="{successkid}" />
 	<figcaption>Have fun with Sapper!</figcaption>
 </figure>
 

@@ -34,11 +34,6 @@ export default {
 					dev,
 					hydratable: true,
 				},
-				preprocess: {
-					...image({
-						placeholder: "blur",
-					}),
-				},
 			}),
 			url({
 				sourceDir: path.resolve(__dirname, "src/node_modules/images"),
