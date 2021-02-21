@@ -48,7 +48,7 @@
 <button on:click={doThing}>Send Me Elsewhere</button>
 
 <figure>
-	<Image alt="Success Kid" src="successkid.jpg" />
+	<Image alt="Success Kid" src="../static/images/successkid.jpg" />
 	<figcaption>Have fun with Sapper!</figcaption>
 </figure>
 
