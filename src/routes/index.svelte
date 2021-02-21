@@ -1,5 +1,5 @@
 <script>
-	import successkid from 'images/successkid.jpg';
+	import successkid from '../../static/successkid.jpg';
 	import { goto } from '@sapper/app'
 	import { fadeIn, fadeOut } from "../animate"
 
@@ -58,5 +58,9 @@
 	<figcaption>Have fun with Sapper!</figcaption>
 </figure>
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<p>
+	<strong>
+		Try editing this file (src/routes/index.svelte) to test live reloading.
+	</strong>
+</p>
 </div>
