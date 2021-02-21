@@ -4,7 +4,6 @@ import replace from "@rollup/plugin-replace";
 import commonjs from "@rollup/plugin-commonjs";
 import url from "@rollup/plugin-url";
 import svelte from "rollup-plugin-svelte";
-import image from "svelte-image";
 import babel from "@rollup/plugin-babel";
 import { terser } from "rollup-plugin-terser";
 import config from "sapper/config/rollup.js";
