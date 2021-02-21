@@ -1,5 +1,12 @@
 <script>
-	import successkid from 'images/successkid.jpg';
+	import { goto } from '@sapper/app'
+	import { fadeIn, fadeOut } from "../animate"
+	import Image from 'svelte-image'; 
+
+	function doThing() {
+		console.log('doing the thing')
+		goto('/blog')
+	}
 </script>
 
 <style>
@@ -19,12 +26,6 @@
 		margin: 0 0 1em 0;
 	}
 
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
 	p {
 		margin: 1em auto;
 	}
@@ -40,11 +41,16 @@
 	<title>Sapper project template</title>
 </svelte:head>
 
+<div in:fadeIn out:fadeOut>
+
 <h1>Great success!</h1>
 
+<button on:click={doThing}>Send Me Elsewhere</button>
+
 <figure>
-	<img alt="Success Kid" src="{successkid}">
+	<Image alt="Success Kid" src="successkid.jpg" />
 	<figcaption>Have fun with Sapper!</figcaption>
 </figure>
 
 <p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+</div>

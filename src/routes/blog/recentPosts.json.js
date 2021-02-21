@@ -35,6 +35,7 @@ function sortPosts(posts) {
 export function get(req, res) {
 	const posts = getAllPosts("src/posts");
 	const sortedPosts = sortPosts(posts);
+	// add a way to only return the first three posts
 
 	res.writeHead(200, {
 		"Content-Type": "application/json",
