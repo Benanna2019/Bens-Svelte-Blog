@@ -5,7 +5,5 @@
 <h1>Conact me!</h1>
 
 <a href="https://www.linkedin.com/in/benjaminapatton">Follow Me On LinkedIn</a>
-<br/>
 <a href="https://twitter.com/BenAPatton">Follow Me On Twitter</a>
-<br/>
 <a href="https://github.com/Benanna2019">Follow Me On Github</a>

@@ -1,19 +1,21 @@
 <script context="module">
     import { fadeIn, fadeOut } from "../../animate"
+
 	export async function preload() {
 
 		const res = await this.fetch(`blog/recentPosts.json`);
 		const posts = await res.json(); 
 		return { posts }
-
 	}
-</script>
 
+</script>
 
 <script>
     import { fly } from "svelte/transition"
+
     export let segment; 
     export let posts; 
+
 </script>
 
 <style>
@@ -29,7 +31,7 @@
 </style>
 
 <div in:fadeIn out:fadeOut class="two-col">
-    <slot /> 
+    <slot />
     {#if segment}
     <aside transition:fly="{{ x: 100 }}">
         <h4>Post Archive</h4>

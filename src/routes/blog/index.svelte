@@ -24,13 +24,13 @@
 	<title>Blog</title>
 </svelte:head>
 
-<div in:fadeIn out:fadeOut>
+<div>
 <h1>Recent posts</h1>
 
 <ul>
 	{#each posts as post}
-		<li>
-			<a rel="prefetch" href="blog/{post.slug}">{post.title} - {post.date}</a>
+	<li>
+		<a rel="prefetch" href="blog/{post.slug}">{post.title} - {post.date}</a>
 	</li>
 	{/each}
 </ul>
