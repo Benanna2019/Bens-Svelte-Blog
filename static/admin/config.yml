@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: https://github.com/Benanna2019/Bens-Svelte-Blog
+  repo: Benanna2019/Bens-Svelte-Blog
 publish_mode: editorial_workflow
 media_folder: static/uploads
 public_folder: /uploads
