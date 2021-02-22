@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: Benanna2019/Bens-Svelte-Blog
+  branch: main
 publish_mode: editorial_workflow
 media_folder: static/uploads
 public_folder: /uploads
