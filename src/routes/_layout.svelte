@@ -1,24 +1,34 @@
 <script>
-	import Nav from '../components/Nav.svelte';
+	import Nav from "../components/Nav.svelte";
 
-	export let segment; 
-
+	export let segment;
 </script>
 
 <style>
+	header {
+		position: sticky;
+		position: -webkit-sticky;
+		top: 0;
+		background: #1f364d;
+		margin-top: 0.5em;
+		color: #34d1e6;
+	}
+
 	main {
-		position: relative;
 		min-height: 80vh;
-		background-color: white;
+		background-color: #0e2439;
 		box-sizing: border-box;
+		color: white;
+		font-size: 1.25rem;
+		display: flex;
+		justify-content: center;
 	}
 </style>
 
 <header>
-	<h1>Ben's Blog</h1>
-	<Nav {segment}/>
+	<Nav {segment} />
 </header>
 
 <main>
-	<slot/>
+	<slot />
 </main>

@@ -9,31 +9,30 @@ import grayMatter from "gray-matter";
 // });
 
 export function get(req, res, next) {
-	const { slug } = req.params;
+  const { slug } = req.params;
 
-	res.writeHead(200, {
-		"Content-Type": "application/json",
-	});
+  res.writeHead(200, {
+    "Content-Type": "application/json",
+  });
 
-	// Reading correct file
+  // Reading correct file
 
-	const post = fs.readFileSync(
-		path.resolve("src/posts", `${slug}.md`),
-		"utf-8"
-	);
-	console.log("post is", post);
+  const post = fs.readFileSync(
+    path.resolve("src/posts", `${slug}.md`),
+    "utf-8"
+  );
 
-	//parse frontmatter
+  //parse frontmatter
 
-	const { data, content } = grayMatter(post);
+  const { data, content } = grayMatter(post);
 
-	// Render html from string
-	const renderer = new marked.Renderer();
-	const html = marked(content, { renderer });
-	const blogPost = {
-		html,
-		...data,
-	};
+  // Render html from string
+  const renderer = new marked.Renderer();
+  const html = marked(content, { renderer });
+  const blogPost = {
+    html,
+    ...data,
+  };
 
-	res.end(JSON.stringify(blogPost));
+  res.end(JSON.stringify(blogPost));
 }
